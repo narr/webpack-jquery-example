@@ -1,3 +1,3 @@
 # webpack-jquery-example
 webpack-jquery-example
-<br>Github page link: <https://github.com/narr/webpack-jquery-example/>
+<br>Github page link: <https://narr.github.io/webpack-jquery-example/>
