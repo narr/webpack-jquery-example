@@ -16,6 +16,9 @@ module.exports = {
     ]
   },
   output: {
+    publicPath: '//narr.github.io/webpack-jquery-example/',
+    // publicPath: '//192.168.0.2:8080/',
+    // publicPath: '//localhost:8080/',
     path: distPath,
     filename: 'js/[name].bundle.js?[hash]'
   },
@@ -32,7 +35,7 @@ module.exports = {
       }, {
         test: /\.(jpe?g|png|gif|svg)$/i,
         loaders: [
-          'file?hash=sha512&digest=hex&name=/[path][name].[ext]?[hash]',
+          'file?hash=sha512&digest=hex&name=[path][name].[ext]?[hash]',
           'image-webpack?progressive&optimizationLevel=7'
         ]
       }, {
