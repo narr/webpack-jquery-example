@@ -24,8 +24,7 @@ module.exports = {
       }, {
         test: /\.(jpe?g|png|gif|svg)$/i,
         loaders: [
-          'file?hash=sha512&digest=hex&name=/[path][name].[ext]?[hash]',
-          'image-webpack?bypassOnDebug&optimizationLevel=7'
+          'file?hash=sha512&digest=hex&name=/[path][name].[ext]?[hash]'
         ]
       }, {
         test: /\.js?$/,

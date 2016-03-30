@@ -33,7 +33,7 @@ module.exports = {
         test: /\.(jpe?g|png|gif|svg)$/i,
         loaders: [
           'file?hash=sha512&digest=hex&name=/[path][name].[ext]?[hash]',
-          'image-webpack?bypassOnDebug&optimizationLevel=7'
+          'image-webpack?progressive&optimizationLevel=7'
         ]
       }, {
         test: /\.js$/,
@@ -66,7 +66,8 @@ module.exports = {
     new CopyWebpackPlugin(
       [
         // from: relative path to context path
-        { from: './node_modules/jquery/dist/jquery.min.js', to: 'lib' }
+        { from: './node_modules/jquery/dist/jquery.min.js', to: 'lib' },
+        { from: './lib/skrollr.min.js', to: 'lib' }
       ],
       {
         ignore: [

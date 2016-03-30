@@ -1,3 +1,191 @@
+html,
 body {
+  height: 100%;
+  padding: 0;
   margin: 0;
+  // width: 100%;
+  // overflow-x: hidden;
+}
+
+.skrollable {
+  /*
+	 * First-level skrollables are positioned relative to window
+	 */
+  position: fixed;
+  /*
+	 * Skrollables by default have a z-index of 100 in order to make it easy
+   * to position elements in front/back without changing each skrollable
+	 */
+  // z-index: 100;
+}
+
+.skrollr-mobile .skrollable {
+  /*
+   * https://github.com/Prinzhorn/skrollr
+	 * May cause issues on Android default browser (see #331 on GitHub).
+	 */
+  position: absolute;
+}
+
+.skrollable .skrollable {
+  /*
+	 * Second-level skrollables are positioned relative their parent skrollable
+	 */
+  position: absolute;
+}
+
+.skrollable .skrollable .skrollable {
+  /*
+	 * Third-level (and below) skrollables are positioned static
+	 */
+  position: static;
+}
+
+
+
+
+body {
+  background: #eeeeee;
+  font-family: Verdana, sans-serif;
+}
+
+
+#bg1,
+#bg2,
+#bg3 {
+  position:fixed;
+  background: url(../res/images/bubbles.png);
+  background-size: 50% 50%;
+  top: 0%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  // z-index: 50;
+}
+
+#bg2 {
+  background-image: url(../res/images/bubbles2.png);
+  // z-index: 49;
+}
+
+#bg3 {
+  background-image: url(../res/images/bubbles3.png);
+  // z-index: 48;
+}
+
+#intro {
+  position: absolute;
+  left: 50%;
+  width: 80%;
+  margin-left: -40%;
+  top: 50%;
+  height: 320px;
+  margin-top: -160px;
+  padding: 2em;
+  background: #ffa;
+  text-align: center;
+  border-radius: 1em;
+  box-sizing: border-box;
+  transform-origin: 0 0;
+}
+
+#intro .arrows {
+  font-size: 2em;
+  color: #09f;
+}
+
+
+#bg4 {
+  position: fixed;
+  top: 100%;
+  background: #ebe5e5;
+  width: 100%;
+  height: 100%;
+}
+
+#transform {
+  position: absolute;
+  left: 50%;
+  width: 70%;
+  margin-left: -35%;
+  top: 30%;
+  text-align: center;
+  font-size: 150%;
+}
+
+
+#bg5 {
+  position: fixed;
+  top: 100%;
+  background: rgb(174, 222, 230);
+  width: 100%;
+  height: 100%;
+}
+
+#easing {
+  top: 10%;
+  width: 50%;
+  // z-index: 101;
+}
+
+.drop {
+  display: none;
+  left: 15%;
+  background: #09f;
+  font-weight: bold;
+  padding: 1em;
+}
+
+
+#bg6 {
+  position: fixed;
+  top: 100%;
+  background: #CBF5C7;
+  width: 100%;
+  height: 100%;
+
+  img {
+    display: block;
+    margin: auto;
+    height: 33%;
+  }
+}
+
+
+#progress {
+  height: 2%;
+  bottom: 0;
+  // background: #444;
+  // z-index: 200;
+}
+
+
+// .skrollr-desktop #scrollbar {
+//   display: block;
+// }
+
+.skrollr-mobile #scrollbar {
+  display: block;
+}
+
+#scrollbar {
+  display: none;
+  position: fixed;
+  right: 2px;
+  height: 50px;
+  width: 6px;
+  background: #444;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  z-index: 300;
+  border-radius: 3px;
+}
+
+
+
+
+@media only screen and (max-width: 480px) {
+  #intro {
+    background: #09f;
+  }
 }
