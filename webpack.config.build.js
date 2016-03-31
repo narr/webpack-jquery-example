@@ -39,6 +39,11 @@ module.exports = {
           'image-webpack?progressive&optimizationLevel=7'
         ]
       }, {
+        test: /\.(mp4)$/i,
+        loaders: [
+          'file?hash=sha512&digest=hex&name=/[path][name].[ext]?[hash]'
+        ]
+      }, {
         test: /\.js$/,
         exclude: [/node_modules/],
         loaders: ['babel']
