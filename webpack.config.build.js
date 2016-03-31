@@ -87,5 +87,8 @@ module.exports = {
         }
       });
     }
-  ]
+  ],
+  resolve: {
+    root: './'
+  }
 };

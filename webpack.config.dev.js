@@ -42,5 +42,8 @@ module.exports = {
       inject: 'body'
     })
   ],
+  resolve: {
+    root: './'
+  },
   devtool: 'source-map'
 };
